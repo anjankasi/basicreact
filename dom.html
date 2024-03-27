@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="startingP"> The button was not clicked</p>
+    <button class="btn" onclick="handleClick()">Click Me</button>
+    <script>
+        const myPara = document.getElementById("startingP");
+        console.log(myPara);
+        //myPara.innerText = "This is manipulated paragraph";
+
+        const handleClick = () => {
+            console.log("button clicked");
+            myPara.innerText="The button was clicked";
+        }
+    </script>
+   
+
+</body>
+</html>

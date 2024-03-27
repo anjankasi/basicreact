@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const userInput= prompt("Hello, how are you?");
+        // if (userInput === 'good')
+        // {
+        //     console.log("Very nice of you");
+        // } else {
+        //     console.log("Sad to  know");
+        // }
+
+        // write a function that takes in parameters first name and surname and returns
+        // string greeting
+        function sayHello(firstName, surName){
+            return (
+                `Hello, ${firstName} ${surName}`
+            )
+        }
+
+        console.log(sayHello('anjan','sampath'));
+
+        //arrow function
+        const sayHello2 = (firstName, surName) =>{
+               console.log(`Hello, ${firstName} ${surName}`); 
+        }
+
+        // only 1 line of code with no curly braces implies return is automatically
+        // added
+        const sayHello3 = (firstName, surName) =>
+               `Hello, ${firstName} ${surName}`; 
+        console.log(sayHello3('single','line'));
+
+
+
+        sayHello2('Anjan','Sampath');
+
+        const h = sayHello2("Matt","thorn");
+        //console.log(h);
+
+        
+    </script>
+    Hello World
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="startingP"> The button was not clicked</p>
+    <p id="rounds">Rounds played: <span id="rp"></span></p>
+    <p id="total">Current Total: <span id="ct"></span></p>
+    <p id="average">Current Average: <span id="ca"></span></p>
+
+    <button class="btn" id="score1" onclick="handleScore1()">Score 1</button>
+    <button class="btn" id="score2" onclick="handleScore2()">Score 2</button>
+    <button class="btn" id="score3" onclick="handleScore3()">Score 3</button>
+    <script>
+        const myPara = document.getElementById("startingP");
+        console.log(myPara);
+        let roundTotal = 0;
+        let totalHits = 0;
+        let avgeage = 0;
+        const roundsTotal = () =>{
+            let spanData = document.getElementById("rp").innerText;
+            if (spanData === "")
+                roundTotal = 0;
+            else
+                roundTotal++;
+            totalHits++;
+            document.getElementById("ct").innerText = totalHits;
+            document.getElementById("ca").innerText = totalHits/roundTotal;
+
+        }
+        //myPara.innerText = "This is manipulated paragraph";
+
+        const handleTotals = () => {
+            const rt = roundsTotal();
+            console.log(roundTotal);
+            document.getElementById("rp").innerText = roundTotal   ;
+            if (roundTotal === 10){
+                document.getElementById("score1").disabled=true;
+                document.getElementById("score2").disabled=true;
+                document.getElementById("score3").disabled=true;
+            }
+        }
+        const handleScore1 = () => {
+            console.log("button clicked");
+            handleTotals();
+            
+        }
+
+        const handleScore2 = () => {
+            console.log("button clicked");
+            handleTotals();
+        }
+
+        const handleScore3 = () => {
+            handleTotals();
+        }
+
+
+    </script>
+   
+
+</body>
+</html>

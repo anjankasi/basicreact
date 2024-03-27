@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // array of colors
+        let colors = ["red","blue"];
+        console.log(colors);
+        console.log(colors[0]);
+        const colors2= new Array("red","blue");
+        colors.push("green");
+        console.log(colors);
+        console.log(colors.pop());
+        colors.slice(0, colors.length-2);
+        console.log(colors);
+        const myStr = "this is string";
+        const anotherMyStr = ' this is string';
+        const quote = 'Valers said "if you aint first, you\'re last"';
+        console.log(quote);
+
+        let initial = "Hello ";
+        let name = "Anjan";
+        console.log(initial + name);
+        console.log(initial.concat(name));
+
+        const gr = `hello, ${name}`; // backtick with ${} format
+        console.log(gr);
+        
+        // JS objects
+        const nick = {
+            name: "nick",
+            foods: ["pizza", "sandwich"],
+            preferences:[{color: "purple"},{season: "autumn"}]
+        }
+        console.log(nick);
+        console.log(nick.name);
+        console.log(nick.foods[0]);
+        console.log(nick.preferences[1].season);
+
+        console.log(nick.foods.indexOf("pizza"));
+        console.log(nick.preferences.find(({season}) => season));
+
+        console.log( 1 !== '1'); // true => this is negation of === which means type and value must match
+        console.log( 1 != '1'); //  false => because only values are checked and this case 1 is actually same as '1'. So, if u negate it
+        // it means false.
+
+        console.log(1 === +"1"); // + means changes to number. So 1 === 1
+        
+
+    </script>
+    Hello World
+</body>
+</html>
